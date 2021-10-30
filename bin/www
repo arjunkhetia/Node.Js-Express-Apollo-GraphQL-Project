@@ -111,5 +111,6 @@ if (cluster.isWorker) {
      server.close();
      process.exit();
    });
-  console.log('Node-Express-Apollo-GraphQL-Server Started on http://localhost:'+port+'\n');
+  console.log('Node-Express-Apollo-GraphQL-Server Started on http://localhost:'+port);
+  console.log('Apollo Server on http://localhost:'+port+'/graphql');
 }

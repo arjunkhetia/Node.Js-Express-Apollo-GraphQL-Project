@@ -1,4 +1,4 @@
-# Node-Express-GraphQL Project   ![Version][version-image]
+# Node-Express-Apollo-GraphQL Project   ![Version][version-image]
 
 ![Linux Build][linuxbuild-image]
 ![Windows Build][windowsbuild-image]
@@ -7,10 +7,10 @@
 ![Dependency Status][dependency-image]
 ![devDependencies Status][devdependency-image]
 
-The quickest way to get start with Node.Js, Express & GraphQL, just clone the project:
+The quickest way to get start with Node.Js, Express & Apollo GraphQL, just clone the project:
 
 ```bash
-$ git clone https://github.com/arjunkhetia/Node.Js-Express-GraphQL-Project.git
+$ git clone https://github.com/arjunkhetia/Node.Js-Express-Apollo-GraphQL-Project.git
 ```
 
 Install dependencies:
@@ -25,7 +25,7 @@ Start Express.js app at `http://localhost:3000/`:
 $ npm start
 ```
 
-GraphQL server will start at `http://localhost:3000/graphql`, query:
+Apollo GraphQL server will start on `http://localhost:3000/graphql`, query:
 
 ```js
 query {
@@ -58,6 +58,16 @@ query {
     first_name,
     last_name,
     email,
+    gender
+  }
+}
+
+subscription Subscription {
+  newUser {
+    id
+    first_name
+    last_name
+    email
     gender
   }
 }
