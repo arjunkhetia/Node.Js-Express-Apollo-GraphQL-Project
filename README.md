@@ -73,6 +73,14 @@ subscription Subscription {
 }
 ```
 
+## Apollo Studio Screen with graphql response
+
+![Apollo Studio](https://github.com/arjunkhetia/Node.Js-Express-Apollo-GraphQL-Project/blob/master/public/apollo-studio.png "Apollo Studio")
+
+## Apollo Studio Screen with trace response
+
+![Apollo Trace](https://github.com/arjunkhetia/Node.Js-Express-Apollo-GraphQL-Project/blob/master/public/apollo-trace.png "Apollo Trace")
+
 # Nodemon
 
 Nodemon will watch the files in the directory in which nodemon was started, and if any files change, nodemon will automatically restart your node application.
@@ -205,7 +213,7 @@ app.use(require('express-status-monitor')({
 }));
 ```
 
-![Monitoring Page](https://github.com/arjunkhetia/Node.Js-Express-Project/blob/master/public/status-monitor.png "Monitoring Page")
+![Monitoring Page](https://github.com/arjunkhetia/Node.Js-Express-Apollo-GraphQL-Project/blob/master/public/status-monitor.png "Monitoring Page")
 
 [version-image]: https://img.shields.io/badge/Version-1.0.0-orange.svg
 [linuxbuild-image]: https://img.shields.io/badge/Linux-passing-brightgreen.svg

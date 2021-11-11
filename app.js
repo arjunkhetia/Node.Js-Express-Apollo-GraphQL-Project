@@ -18,6 +18,7 @@ var { makeExecutableSchema } = require("@graphql-tools/schema");
 var { createServer } = require("http");
 var { execute, subscribe } = require("graphql");
 var { SubscriptionServer } = require("subscriptions-transport-ws");
+var { ApolloServerPluginInlineTrace } = require("apollo-server-core");
 
 // Defining routes
 var routes = require("./routes");
@@ -41,15 +42,18 @@ const server = new ApolloServer({
   context: ({ req, res }) => {
     return { req, res };
   },
-  plugins: [{
-    async serverWillStart() {
-      return {
-        async drainServer() {
-          subscriptionServer.close();
-        }
-      };
-    }
-  }],
+  plugins: [
+    ApolloServerPluginInlineTrace(),
+    {
+      async serverWillStart() {
+        return {
+          async drainServer() {
+            subscriptionServer.close();
+          },
+        };
+      },
+    },
+  ],
   formatError: (error) => {
     return {
       name: error.name,
